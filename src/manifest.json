@@ -1,0 +1,14 @@
+{
+	"manifest_version":2,
+	"name":"ニコニコ最前面コメント",
+	"description":"見にくい背景コメントを無効化する",
+	"version": "2.7",
+	"icons":{
+		"48":"icon48.png",
+		"128":"icon128.png"
+	},
+	"content_scripts":[{
+		"matches":["http://www.nicovideo.jp/watch/*"],
+		"js":["contentScript.js"]
+	}]
+}
