@@ -46,7 +46,7 @@ function disableIsBackComment2(){//ginza
 					WatchApp.namespace.model.player.NicoPlayerConnector.externalChangeVideo(a);
 				};
 				var readyInit=function(){
-					if(WatchApp.namespace.init.PlayerInitializer.playerAreaConnector==null){
+					if(!WatchApp || !WatchApp.namespace || !WatchApp.namespace.init || !WatchApp.namespace.init.PlayerInitializer || !WatchApp.namespace.init.PlayerInitializer.playerAreaConnector){
 						setTimeout(readyInit,10);
 					}else{
 						WatchApp.namespace.init.PlayerInitializer.playerAreaConnector.addEventListener("jumpVideo",function(e){debugger;checkLog("jumpVideo");});
